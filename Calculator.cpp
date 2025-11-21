@@ -2,10 +2,6 @@
 using namespace std;
 
 float sum(float num1, float num2) {
-
-	float sum;
-	sum = num1 + num2;
-
 	return sum;
 }
 
