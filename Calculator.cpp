@@ -2,7 +2,11 @@
 using namespace std;
 
 float sum(float num1, float num2) {
-	return num1 + num2;
+
+	float sum;
+	sum = num1 + num2;
+
+	return sum;
 }
 
 float subtraction(float num1, float num2) {
@@ -35,22 +39,18 @@ int get_user_input() {
 	return input;
 }
 
-int get_numbers_input() {
-
-	float input1, input2;
-
+void get_numbers_input(float& input1, float& input2) {
 	cout << "Enter two numbers separated by space: ";
 	cin >> input1 >> input2;
-
-	return input1, input2;
 }
+
 
 int select_operation(int choice) {
 
 	float result{};
 
 	float num1{}, num2;
-	num1, num2 = get_numbers_input();
+	get_numbers_input(num1, num2);
 
 	if (choice == 1) result = sum(num1, num2);
 	else if (choice == 2) result = subtraction(num1, num2);
@@ -63,11 +63,12 @@ int select_operation(int choice) {
 int main() {
 
 	while (true) {
-		int choose = get_user_input();
-		if (choose == 5) break;
+		int choice = get_user_input();
+		if (choice == 5) break;
 
-		float calculated_num = select_operation(choose);
+		float calculated_num = select_operation(choice);
 		cout << "Result: " << calculated_num << endl;
 
 	};
+	return 0;
 }
