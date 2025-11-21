@@ -31,14 +31,11 @@ int get_user_input() {
 	cout << "4) Division (/)" << endl;
 	cout << "Enter the number of the operation (1-4): ";
 	cin >> input;
-
-	cout << "You have Choosed: " << input << endl;
-
-	return 0;
+	return input;
 }
 
 int main() {
 
-	get_user_input();
+	string output = get_user_input();
 
 }
